@@ -1,0 +1,203 @@
+<ion-view ng-controller="AppController">
+    <ion-content scroll="false">
+        <tab-slide-box tab="0">
+            <div class="tsb-icons">
+                <div class="tsb-ic-wrp">
+                    <ion-scroll direction="x" class="tsb-hscroll">
+                        <a href="javascript:;" class="{{tab.icon}}" ng-repeat="tab in tabItems">{{tab.text}}</a>
+                    </ion-scroll>
+                </div>
+            </div>
+            <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+                <ion-slide ng-controller="SwiftController">
+                    <ion-view view-title="Swift">
+                        <ion-content>
+
+                            <ion-refresher pulling-text="Refreshing..." on-refresh="populateList()">
+                            </ion-refresher>
+
+                            <ion-list style="height: 100%;">
+                                <ion-item class="item-avatar item-icon-right" ng-repeat="article in articles" type="item-text-wrap" ng-click="showArticle($index)">
+                                    <img ng-src="{{article.user.profile_image_url}}">
+                                    <p style="width: 250px; white-space: normal">{{article.title}}</p>
+                                    <i class="icon ion-chevron-right icon-accessory"></i>
+                                </ion-item>
+                            </ion-list>
+                        </ion-content>
+                    </ion-view>
+                </ion-slide>
+                <ion-slide ng-controller="ScalaController">
+                    <ion-view view-title="Scala">
+                        <ion-content>
+
+                            <ion-refresher
+                                    pulling-text="Refreshing..."
+                                    on-refresh="populateList()">
+                            </ion-refresher>
+
+                            <ion-list>
+                                <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="article in articles" type="item-text-wrap" ng-click="showArticle($index)">
+                                    <img ng-src="{{article.user.profile_image_url}}">
+                                    <p style="width: 250px; white-space: normal">{{article.title}}</p>
+                                    <i class="icon ion-chevron-right icon-accessory"></i>
+                                </ion-item>
+                            </ion-list>
+                        </ion-content>
+                    </ion-view>
+                </ion-slide>
+                <ion-slide ng-controller="iOSController">
+                    <ion-view view-title="iOS">
+                        <ion-content>
+
+                            <ion-refresher
+                                    pulling-text="Refreshing..."
+                                    on-refresh="populateList()">
+                            </ion-refresher>
+
+                            <ion-list>
+                                <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="article in articles" type="item-text-wrap" ng-click="showArticle($index)">
+                                    <img ng-src="{{article.user.profile_image_url}}">
+                                    <p style="width: 250px; white-space: normal">{{article.title}}</p>
+                                    <i class="icon ion-chevron-right icon-accessory"></i>
+                                </ion-item>
+                            </ion-list>
+                        </ion-content>
+                    </ion-view>
+                </ion-slide>
+                <ion-slide ng-controller="AndroidController">
+                    <ion-view view-title="Android">
+                        <ion-content>
+
+                            <ion-refresher
+                                    pulling-text="Refreshing..."
+                                    on-refresh="populateList()">
+                            </ion-refresher>
+
+                            <ion-list>
+                                <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="article in articles" type="item-text-wrap" ng-click="showArticle($index)">
+                                    <img ng-src="{{article.user.profile_image_url}}">
+                                    <p style="width: 250px; white-space: normal">{{article.title}}</p>
+                                    <i class="icon ion-chevron-right icon-accessory"></i>
+                                </ion-item>
+                            </ion-list>
+                        </ion-content>
+                    </ion-view>
+                </ion-slide>
+                <ion-slide ng-controller="HaskellController">
+                    <ion-view view-title="Haskell">
+                        <ion-content>
+
+                            <ion-refresher
+                                    pulling-text="Refreshing..."
+                                    on-refresh="populateList()">
+                            </ion-refresher>
+
+                            <ion-list>
+                                <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="article in articles" type="item-text-wrap" ng-click="showArticle($index)">
+                                    <img ng-src="{{article.user.profile_image_url}}">
+                                    <p style="width: 250px; white-space: normal">{{article.title}}</p>
+                                    <i class="icon ion-chevron-right icon-accessory"></i>
+                                </ion-item>
+                            </ion-list>
+                        </ion-content>
+                    </ion-view>
+                </ion-slide>
+                <ion-slide ng-controller="PythonController">
+                    <ion-view view-title="Python">
+                        <ion-content>
+
+                            <ion-refresher
+                                    pulling-text="Refreshing..."
+                                    on-refresh="populateList()">
+                            </ion-refresher>
+
+                            <ion-list>
+                                <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="article in articles" type="item-text-wrap" ng-click="showArticle($index)">
+                                    <img ng-src="{{article.user.profile_image_url}}">
+                                    <p style="width: 250px; white-space: normal">{{article.title}}</p>
+                                    <i class="icon ion-chevron-right icon-accessory"></i>
+                                </ion-item>
+                            </ion-list>
+                        </ion-content>
+                    </ion-view>
+                </ion-slide>
+                <ion-slide ng-controller="CoffeeScriptController">
+                    <ion-view view-title="CoffeeScript">
+                        <ion-content>
+
+                            <ion-refresher
+                                    pulling-text="Refreshing..."
+                                    on-refresh="populateList()">
+                            </ion-refresher>
+
+                            <ion-list>
+                                <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="article in articles" type="item-text-wrap" ng-click="showArticle($index)">
+                                    <img ng-src="{{article.user.profile_image_url}}">
+                                    <p style="width: 250px; white-space: normal">{{article.title}}</p>
+                                    <i class="icon ion-chevron-right icon-accessory"></i>
+                                </ion-item>
+                            </ion-list>
+                        </ion-content>
+                    </ion-view>
+                </ion-slide>
+                <ion-slide ng-controller="nginxController">
+                    <ion-view view-title="nginx">
+                        <ion-content>
+
+                            <ion-refresher
+                                    pulling-text="Refreshing..."
+                                    on-refresh="populateList()">
+                            </ion-refresher>
+
+                            <ion-list>
+                                <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="article in articles" type="item-text-wrap" ng-click="showArticle($index)">
+                                    <img ng-src="{{article.user.profile_image_url}}">
+                                    <p style="width: 250px; white-space: normal">{{article.title}}</p>
+                                    <i class="icon ion-chevron-right icon-accessory"></i>
+                                </ion-item>
+                            </ion-list>
+                        </ion-content>
+                    </ion-view>
+                </ion-slide>
+                <ion-slide ng-controller="ShellScriptController">
+                    <ion-view view-title="shellscript">
+                        <ion-content>
+
+                            <ion-refresher
+                                    pulling-text="Refreshing..."
+                                    on-refresh="populateList()">
+                            </ion-refresher>
+
+                            <ion-list>
+                                <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="article in articles" type="item-text-wrap" ng-click="showArticle($index)">
+                                    <img ng-src="{{article.user.profile_image_url}}">
+                                    <p style="width: 250px; white-space: normal">{{article.title}}</p>
+                                    <i class="icon ion-chevron-right icon-accessory"></i>
+                                </ion-item>
+                            </ion-list>
+                        </ion-content>
+                    </ion-view>
+                </ion-slide>
+                <ion-slide ng-controller="GitController">
+                    <ion-view view-title="git">
+                        <ion-content>
+
+                            <ion-refresher
+                                    pulling-text="Refreshing..."
+                                    on-refresh="populateList()">
+                            </ion-refresher>
+
+                            <ion-list>
+                                <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="article in articles" type="item-text-wrap" ng-click="showArticle($index)">
+                                    <img ng-src="{{article.user.profile_image_url}}">
+                                    <p style="width: 250px; white-space: normal">{{article.title}}</p>
+                                    <i class="icon ion-chevron-right icon-accessory"></i>
+                                </ion-item>
+                            </ion-list>
+                        </ion-content>
+                    </ion-view>
+                </ion-slide>
+            </ion-slide-box>
+        </tab-slide-box>
+    </ion-content>
+</ion-view>
