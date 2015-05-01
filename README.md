@@ -6,33 +6,33 @@ coffeescriptを使ったIonicのアプリのサンプルです
 プロジェクトの動かし方
 ---
 
-以下のコマンドでプロジェクトを初期化します
+1.以下のコマンドでプロジェクトを初期化します
 
 ```
 $ npm install
 $ gulp install
 ```
 
-iOSとAndroidのプラットフォームを追加します
+2.iOSとAndroidのプラットフォームを追加します
 
 ```
 $ ionic platform add ios
 $ ionic platform add android
 ```
 
-必要なプラグインを追加します
+3.必要なプラグインを追加します
 
 ```
 $ gulp ionic-plugin-install
 ```
 
-AndroidでブラウザのレンダリングエンジンをCrosswalkに変更します
+4.AndroidでブラウザのレンダリングエンジンをCrosswalkに変更します
 
 ```
 $ ionic browser add crosswalk@10.39.235.15
 ```
 
-iOSは実行前に以下のコマンドをインストールします
+5.iOSは実行前に以下のコマンドをインストールします
 
 `$ sudo npm install -g ios-sim`
 
