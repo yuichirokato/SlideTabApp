@@ -72,3 +72,12 @@ gulp.task('ionic-plugin-install', function () {
         });
     }
 });
+
+gulp.task('ionic-platform-install', function () {
+    var platforms = require('./package.json').cordovaPlatforms;
+    platforms.forEach(function (platform) {
+        sh.exec('ionic platform add ' + platform, {async: false}, function (code, output) {
+            console.log(output);
+        });
+    });
+});
