@@ -1,5 +1,3 @@
-# SlideTabApp
-
 Ionic SlideTabApp
 ===
 
@@ -12,6 +10,7 @@ coffeescriptを使ったIonicのアプリのサンプルです
 
 ```
 $ npm install
+$ gulp install
 ```
 
 iOSとAndroidのプラットフォームを追加します
