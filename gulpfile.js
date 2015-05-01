@@ -62,3 +62,13 @@ gulp.task('git-check', function (done) {
     }
     done();
 });
+
+gulp.task('ionic-plugin-install', function () {
+    var plugins = require('./package.json').cordovaPlugins;
+    for (var i = 0; i < plugins.length; i++) {
+        var plugin = plugins[i];
+        sh.exec('ionic plugin add ' + plugin, {async: false}, function (code, output) {
+            console.log(output);
+        });
+    }
+});
